@@ -178,7 +178,11 @@
    <script src="assets/js/main.js"></script>
    <script>
       $(document).ready(function() {
-          $('#fullpage').fullpage();
+          $('#fullpage').fullpage({
+            scrollingSpeed: 800,
+            loopTop: true,
+            loopBottom: true
+          });
       });
    </script>
 </body>
