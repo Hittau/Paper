@@ -1,0 +1,290 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   outline: none;
+   border: 0;
+   text-decoration: none;
+   list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+   margin: 0;
+   padding: 0;
+   color: #fff;
+   font-family: Playfair Display, sans-serif;
+}
+.title {
+   font-size: 140px;
+   text-align: center;
+   padding-bottom: 46px;
+   min-width: 300px;
+}
+.subtitle {
+   font-size: 24px;
+}
+a {
+   color: #fff;
+}
+.btn {
+   position: relative;
+
+   width: 160px;
+   height: 44px;
+
+   margin-top: 88px;
+
+   border: 2px solid #fff;
+   border-radius: 20px;
+
+   font-family: Lato, sans-serif;
+   font-size: 12px;
+   letter-spacing: 0.031em;
+   color: #fff;
+   opacity: 0.8;
+
+   background-image: linear-gradient(transparent 50%, #fff 50%);
+   background-size: 200% 200%;
+   background-position: 0 200%;
+   background-repeat: no-repeat;
+   transition: .3s;
+
+   &:hover {
+      background-position: 0 100%;
+      color: #111;
+   }
+}
+.overlap {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background: #000;
+   opacity: .2;
+   z-index: 1;
+}
+.header,
+.red-room,
+.book-cover,
+.photoshoot,
+.portrait,
+.footer {
+   height: 100vh;
+}
+.header {
+   background: #bebebe url(../img/bg_1.jpg) center no-repeat;
+   background: #bebebe url(../img/bg_1.webp) center no-repeat;
+   background-size: cover;
+   &__logo {
+      padding: 35px 0px 25px 0px;
+   }
+   .nav {
+      font-family: Playfair Display, sans-serif;
+      font-size: 22px;
+      &__item {
+         transition: opacity .4s ease;
+         &:not(:first-child) {
+            margin-left: 40px;
+         }
+         &:hover {
+            opacity: .6;
+         }
+      }
+   }
+   &__btn {
+      margin-top: 165px;
+   }
+}
+.red-room {
+   background: #6d0209 url(../img/bg_2.jpg) center no-repeat;
+   background: #6d0209 url(../img/bg_2.webp) center no-repeat;
+   background-size: cover;
+   &__btn {
+      margin-top: 165px;
+
+      background-image: linear-gradient(45deg, #fff 50%, transparent 50%);
+      background-position: 100%;
+      background-size: 400%;
+
+      transition: all .6s ease;
+
+      &:hover {
+         background-position: 0;
+      }
+   }
+}
+.book-cover {
+   background: #0f3a49 url(../img/bg_3.jpg) center no-repeat;
+   background: #0f3a49 url(../img/bg_3.webp) center no-repeat;
+   background-size: cover;
+   &__title {
+      max-width: 870px;
+   }
+   &__btn {
+      background-position: 0 0;
+   }
+}
+.photoshoot {
+   background: #616161 url(../img/bg_4.jpg) center no-repeat;
+   background: #616161 url(../img/bg_4.webp) center no-repeat;
+   background-size: cover;
+   &__title {
+      max-width: 900px;
+   }
+   &__btn {
+      overflow: hidden;
+      z-index: 1;
+      transition: color 150ms ease-in-out;
+      &:after {
+         content: '';
+         position: absolute;
+         display: block;
+         top: 0;
+         left: 50%;
+         transform: translateX(-50%);
+         width: 0;
+         height: 100%;
+         background: #fff;
+         z-index: -1;
+         transition: width .3s ease-in-out;
+      }
+      &:hover {
+         color: #111;
+      }
+      &:hover::after {
+         width: 110%;
+      }
+   }
+}
+.portrait {
+   background: #a4918b url(../img/bg_5.jpg) center no-repeat;
+   background: #a4918b url(../img/bg_5.webp) center no-repeat;
+   background-size: cover;
+   &__title {
+      max-width: 950px;
+   }
+   &__btn {
+      transition: box-shadow .4s ease-in-out, color .5s ease-in-out;
+      &:hover {
+         box-shadow: 0 0 40px 40px #fff inset;
+      }
+   }
+}
+.footer {
+   background: #000;
+   &__title {
+      font-size: 50px;
+   }
+   &__btn {
+      width: 186px;
+      height: 42px;
+      background: #fff;
+      color: #111;
+      border: none;
+      font-size: 14px;
+      margin-top: 60px;
+   }
+   .copyright,
+   .contacts__item {
+      color: #666;
+      font-size: 13px;
+   }
+}
+
+@media (max-width: 991px) {
+   .title {
+      font-size: 100px;
+   }
+}
+@media (max-width: 767px) {
+   .title {
+      font-size: 80px;
+   }
+   .overlap {
+      opacity: .3;
+   }
+}
+@media (max-width: 575px) {
+   .header {
+      &__burger {
+         display: block;
+         position: relative;
+         width: 30px;
+         height: 20px;
+         z-index: 2!important;
+         margin-top: 40px;
+         span {
+            background: #fff;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            right: 0;
+            top: 9px;
+            transition: all 0.3s;
+         }
+         &::before,
+         &::after {
+            content: "";
+            background: #fff;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            right: 0;
+            transition: all 0.3s;
+         }
+         &::before {
+            top: 0;
+         }
+         &::after {
+            bottom: 0;
+         }
+         &.active::before {
+            transform: rotate(45deg);
+            top: 9px;
+         }
+         &.active::after {
+            transform: rotate(-45deg);
+            bottom: 9px;
+         }
+         &.active span {
+            transform: scale(0);
+         }
+      }
+      .menu {
+         position: absolute;
+         top: -100%;
+         left: 0;
+         background: #212121;
+         width: 100%;
+         height: 60%;
+         transition: top .7s;
+         box-shadow: 0px 10px 15px 0px rgba(34, 60, 80, 0.2);
+         .nav {
+            &__item {
+               margin-left: 0;
+               margin-top: 20px;
+            }
+         }
+         &.active {
+            top: 0;
+         }
+      }
+      &__logo {
+         position: absolute;
+         left: 50%;
+         transform: translate(-50%);
+         padding: 0;
+      }
+   }
+   .title {
+      white-space: normal;
+      font-size: 52px;
+   }
+   .subtitle {
+      font-size: 20px;
+   }
+}
