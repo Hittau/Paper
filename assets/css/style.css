@@ -157,34 +157,7 @@ a {
 }
 
 .photoshoot__btn {
-  overflow: hidden;
-  z-index: 1;
-  -webkit-transition: color 150ms ease-in-out;
-  transition: color 150ms ease-in-out;
-}
-
-.photoshoot__btn:after {
-  content: '';
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  width: 0;
-  height: 100%;
-  background: #fff;
-  z-index: -1;
-  -webkit-transition: width .3s ease-in-out;
-  transition: width .3s ease-in-out;
-}
-
-.photoshoot__btn:hover {
-  color: #111;
-}
-
-.photoshoot__btn:hover::after {
-  width: 110%;
+   background-position: 0 0;
 }
 
 .portrait {
