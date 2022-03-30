@@ -110,7 +110,7 @@ a {
 }
 
 .header__btn {
-  margin-top: 165px;
+  margin-top: 20vh;
 }
 
 .red-room {
@@ -302,5 +302,8 @@ a {
   }
   .subtitle {
     font-size: 20px;
+  }
+  .header__btn {
+     margin-top: 12vh;
   }
 }
